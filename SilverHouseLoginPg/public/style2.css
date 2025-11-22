@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #080c16 0%, #02050b 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+/* 3D Background with Smooth Left-Right Motion */
+.hologram {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('desk1.jpg') center center / cover no-repeat;
+  filter: brightness(0.55) saturate(1.2);
+  transform: translateX(0);
+  animation: sway 6s ease-in-out infinite alternate;
+  background-attachment: fixed;
+}
+
+
+@keyframes sway {
+  from { transform: translateX(-25px) scale(1.05); }
+  to { transform: translateX(25px) scale(1.05); }
+}
+
+/* Glass Login Container */
+.login-container {
+  position: relative;
+  z-index: 10;
+  background: rgba(20, 25, 35, 0.7);
+  backdrop-filter: blur(25px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  width: 360px;
+  padding: 40px 45px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+  transform: scale(1.02);
+}
+
+/* Logo Text */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #e5e5e5;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.logo span {
+  color: #cfa43b;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 0.85rem;
+  color: #a9b1bc;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #00bfff;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #bfc3c7, #e8e9ec);
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #dfe3e8, #fff);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Message */
+.msg {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.msg.success { color: #8fffa1; }
+.msg.error { color: #ff8080; }
+
+/* Footer */
+footer {
+  margin-top: 25px;
+  font-size: 11px;
+  color: #777;
+}
