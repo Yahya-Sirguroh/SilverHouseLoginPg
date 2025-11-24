@@ -211,7 +211,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "docs")));
 
 // -----------------------------------------------------
 // LOG DIRECTORY
@@ -308,5 +308,5 @@ app.post("/login", (req, res) => {
 // START SERVER
 // -----------------------------------------------------
 app.listen(PORT, () => {
-  console.log(`🚀 SilverHouse Login running at http://localhost:${PORT}`);
+  console.log(`🚀 SilverHouse Login running at http://10.182.197.75:${PORT}`);
 });
