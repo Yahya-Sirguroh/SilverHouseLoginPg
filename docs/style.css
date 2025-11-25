@@ -260,3 +260,85 @@ footer {
 
 .success { color: #00ff88; }
 .error { color: #ff7070; }
+
+/* ===========================
+   RESPONSIVE DESIGN (MOBILE)
+   =========================== */
+
+@media (max-width: 600px) {
+
+  body {
+    background: url('desk1.jpg') no-repeat center center/cover;
+    overflow: auto;
+    padding: 20px;
+  }
+
+  .login-container {
+    width: 100%;
+    max-width: 320px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+  }
+
+  .logo-image img {
+    width: 70px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .tagline {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+
+  label {
+    font-size: 11px;
+  }
+
+  input {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  input::placeholder {
+    font-size: 13px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 9px;
+    margin-top: 20px;
+  }
+}
+
+/* Extra-small screens (older phones 320–400px) */
+@media (max-width: 400px) {
+
+  .login-container {
+    max-width: 300px;
+    padding: 28px 18px;
+  }
+
+  .logo-image img {
+    width: 60px;
+  }
+
+  .tagline {
+    font-size: 11px;
+  }
+
+  input {
+    padding: 12px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
